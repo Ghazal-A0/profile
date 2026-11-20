@@ -227,7 +227,7 @@ h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.25; }
 /* ============================================================
    نمونه کارها (رفع مشکل پرش و زوم)
    ============================================================ */
-.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 26px; }
+.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 350px)); gap: 26px;justify-content: center; }
 
 .project {
   background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
@@ -376,4 +376,17 @@ h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.25; }
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+@media (max-width: 900px) {
+  /* ... کدهای قبلی که در این بخش داری ... */
+  
+  .avatar-wrap { width: 240px; height: 240px; }
+  
+  /* 👇 این سه خط را اینجا اضافه کن */
+  .avatar-blob, .avatar {
+    animation: none !important; /* توقف انیمیشن موج‌دار */
+    border-radius: 50% !important; /* دایره کامل و ثابت */
+  }
+  
+  /* ... بقیه کدهای این بخش ... */
 }
